@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="TV_Head Space 是由电子浮冰凝结成的一小片虚拟陆地，沿途收集数字燃料前往灯塔。路过它的时候请不要忘了和上面正在学习汇编语言的小萨摩耶说「Hi, there!」。">
+    <meta name="author" content="TV_Head">
+    
+    <title>
+        
+            Django CRM实战|Day2：Django环境搭建 |
+        
+        TV_Head Space
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/tvicon.png">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"white","avatar":"/images/tvicon.png","favicon":"/images/tvicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"TV_Head Space 是由电子浮冰凝结成的一小片虚拟陆地，沿途收集数字燃料前往灯塔。  路过它的时候请不要忘了，和上面正在学习汇编语言的小萨摩耶说：「Hi, there!」。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/tvicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                TV_Head Space
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Django CRM实战|Day2：Django环境搭建</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/tvicon.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">TV_Head</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-06-19 14:31:40
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Django/">Django</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>Pycharm下的Django项目配置，包括后端数据库的连接。</p>
+<span id="more"></span>
+
+<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p>Pycharm新建Django项目。</p>
+<p>这里在Pycharm新建项目界面可能会找不到Django的选项，原因是版本问题。直接新建Django项目是Pycharm专业版的功能，社区版没有这个功能，界面长得和网上的教程也不太一样，需要重新下载专业版。</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/screely-1622982605470.png" class="">
+
+<p>选择Django项目，Pycharm会自动安装Django。</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Untitled.png" class="">
+
+<h1 id="创建Github仓库"><a href="#创建Github仓库" class="headerlink" title="创建Github仓库"></a>创建Github仓库</h1><h1 id="配置Setting-py文件"><a href="#配置Setting-py文件" class="headerlink" title="配置Setting.py文件"></a>配置Setting.py文件</h1><p>Pycharm会在新建的Django项目下生成一个<code>setting.py</code>文件，这一步需要对<code>setting</code>文件中关于数据库的设定进行修改。</p>
+<h2 id="修改数据库配置"><a href="#修改数据库配置" class="headerlink" title="修改数据库配置"></a>修改数据库配置</h2><p>首先将<code>DATABASES</code>中default的内容注释掉。</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Untitled1.png" class="">
+
+<p>由于我们使用的是mysql，需要将<code>ENGINE</code>改成<code>django.db.backend.mysql</code>。</p>
+<p>接着需要填充我们事先建立好的数据库的信息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line"><span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line"><span class="comment"># &#x27;ENGINE&#x27;: &#x27;django.db.backends.sqlite3&#x27;,</span></span><br><span class="line">        <span class="comment"># &#x27;NAME&#x27;: BASE_DIR / &#x27;db.sqlite3&#x27;,</span></span><br><span class="line"><span class="string">&#x27;ENGINE&#x27;</span>:<span class="string">&#x27;django.db.backends.mysql&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;NAME&#x27;</span>:<span class="string">&#x27;crm&#x27;</span>,<span class="comment">#数据库名</span></span><br><span class="line"><span class="string">&#x27;USER&#x27;</span>:<span class="string">&#x27;root&#x27;</span>,<span class="comment">#数据库用户名，本机一般为root</span></span><br><span class="line"><span class="string">&#x27;PASSWORD&#x27;</span>:<span class="string">&#x27;&#x27;</span>,<span class="comment">#数据库密码</span></span><br><span class="line"><span class="string">&#x27;HOST&#x27;</span>:<span class="string">&#x27;127.0.0.1&#x27;</span>,<span class="comment">#数据库连接ip，一般不需要改动</span></span><br><span class="line"><span class="string">&#x27;PORT&#x27;</span>:<span class="string">&#x27;3306&#x27;</span>,<span class="comment">#端口，一般不需要改动</span></span><br><span class="line"><span class="string">&#x27;ATOMATIC_REQUESTS&#x27;</span>: <span class="literal">True</span><span class="comment">#全局生效自动提交事务</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改时区设定"><a href="#修改时区设定" class="headerlink" title="修改时区设定"></a>修改时区设定</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE_TZ = <span class="literal">False</span> <span class="comment">#使用系统当前时间</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="打印日志"><a href="#打印日志" class="headerlink" title="打印日志"></a>打印日志</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">LOGGING = &#123;</span><br><span class="line">&#x27;version&#x27;: 1,</span><br><span class="line">&#x27;disable_existing_loggers&#x27;: False,</span><br><span class="line">&#x27;formatters&#x27;: &#123;</span><br><span class="line">&#x27;verbose&#x27;: &#123;</span><br><span class="line">&#x27;format&#x27;:&#x27;[%(asctime)s] [%(levelname)s] %(message)s&#x27;</span><br><span class="line">&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#x27;handlers&#x27;: &#123;</span><br><span class="line">&#x27;console&#x27;:&#123;</span><br><span class="line">&#x27;level&#x27;:&#x27;INFO&#x27;,</span><br><span class="line">&#x27;class&#x27;:&#x27;logging.StreamHandler&#x27;,</span><br><span class="line">&#x27;formatter&#x27;:&#x27;verbose&#x27;</span><br><span class="line">&#125;,</span><br><span class="line">&#x27;file&#x27;: &#123;</span><br><span class="line">&#x27;level&#x27;:&#x27;INFO&#x27;,</span><br><span class="line">&#x27;class&#x27;:&#x27;logging.FileHandler&#x27;,</span><br><span class="line">&#x27;filename&#x27;:&#x27;D:/monitor.log&#x27;,</span><br><span class="line">&#x27;formatter&#x27;:&#x27;verbose&#x27;</span><br><span class="line">&#125;,</span><br><span class="line">&#x27;email&#x27;: &#123;</span><br><span class="line">&#x27;level&#x27;:&#x27;ERROR&#x27;,</span><br><span class="line">&#x27;class&#x27;:&#x27;django.utils.log.AdminEmailHandler&#x27;,</span><br><span class="line">&#x27;include_html&#x27;: True,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#x27;loggers&#x27;: &#123;</span><br><span class="line">&#x27;django&#x27;: &#123;</span><br><span class="line">&#x27;handlers&#x27;: [&#x27;console&#x27;,&#x27;file&#x27;,&#x27;email&#x27;],</span><br><span class="line">&#x27;level&#x27;:&#x27;INFO&#x27;,</span><br><span class="line">&#x27;propagate&#x27;: True,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置静态资源"><a href="#配置静态资源" class="headerlink" title="配置静态资源"></a>配置静态资源</h1><p>配置资源的存放路径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STATIC_URL =&#x27;/static/&#x27;</span><br><span class="line"></span><br><span class="line">STATICFILES_DIRS = [</span><br><span class="line">    os.path.join(BASE_DIR,&#x27;static&#x27;),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>同时在根目录下创建<code>static</code>文件夹。</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Untitled2.png" class="">
+
+<p>配置完成后将静态资源拖入<code>static</code>文件夹，将html页面拖入<code>template</code>文件夹。</p>
+<p>在html页面的头部添加：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&#123;%load static%&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果html页面引用了本地的资源，则需要将引用的路径进行修改。</p>
+<h1 id="配置-ignore文件"><a href="#配置-ignore文件" class="headerlink" title="配置.ignore文件"></a>配置.ignore文件</h1><ol>
+<li>生成<code>.ignore</code>文件</li>
+</ol>
+<p>Pycharm中通过<code>.ignore</code>插件进行配置，步骤为：</p>
+<p>右键项目 - new - .ignore file - .gitignore file - 搜索Python - 选中 - Generate</p>
+<p>配置完成后可以看到根目录下生成了一个.gitignore文件</p>
+<p>如果找不到<code>.ignore</code>选项说明还未安装该插件，通过以下步骤进行安装：</p>
+<p>File - Setting - Plugins - 搜索ignore进行安装</p>
+<ol start="2">
+<li>修改.gitignore文件</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Python template</span></span><br><span class="line"><span class="comment"># Byte-compiled / optimized / DLL files</span></span><br><span class="line">__pycache__/</span><br></pre></td></tr></table></figure>
+
+<p>将除上述内容以外的代码删除，并输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.idea/</span><br></pre></td></tr></table></figure>
+
+<h1 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h1><p>工具栏选中<code>VCS</code> - <code>Create git Repository</code> - 选择自己的项目，此时项目会变成一个git项目。</p>
+<p>右键项目 - <code>git</code> - <code>manage remotes</code> - 添加自己的仓库地址。如果未安装git，Pycharm会提示进行安装。</p>
+<p>选中项目中的所有文件进行<code>add</code> -  右键项目 - <code>git</code> - <code>commit directory</code>。此时窗口如下图所示：</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Untitled3.png" class="">
+
+<p>当项目更新时，可以对更新的内容进行commit，在下方框中填写commit信息（随便填），进行<code>commit and push</code>。</p>
+<p>之后就可以按照同样的流程将自己的代码上传到远程仓库啦~</p>
+<h1 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h1><p>至此环境已经搭建完成，点击右上角工具栏中的Run运行项目，可以看到下方的控制台出现如下提示：</p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Untitled4.png" class="">
+
+<p>说明Django项目已部署成功，点击<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%A6%82%E4%B8%8B%E7%95%8C%E9%9D%A2%EF%BC%9A">http://127.0.0.1:8000/，可以看到如下界面：</a></p>
+<img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day2%EF%BC%9ADjango%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/screely-1623000895256.png" class="">
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day3%EF%BC%9A%E6%B3%A8%E5%86%8C-%E9%AA%8C%E8%AF%81-%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Django CRM实战|Day3：注册-验证-登录模块实现</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Django CRM实战|Day1：开发环境准备</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">TV_Head</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">新建项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGithub%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">创建Github仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESetting-py%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">配置Setting.py文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="nav-number">3.1.</span> <span class="nav-text">修改数据库配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA%E8%AE%BE%E5%AE%9A"><span class="nav-number">3.2.</span> <span class="nav-text">修改时区设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E6%97%A5%E5%BF%97"><span class="nav-number">3.3.</span> <span class="nav-text">打印日志</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">配置静态资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-ignore%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">配置.ignore文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github"><span class="nav-number">6.</span> <span class="nav-text">部署到Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="nav-number">7.</span> <span class="nav-text">运行测试</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>

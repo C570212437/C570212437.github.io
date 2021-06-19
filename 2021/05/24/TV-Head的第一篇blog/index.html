@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#EEEEEE","avatar":"/images/tvicon.png","favicon":"/images/tvicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"TV_Head Space 是由电子浮冰凝结成的一小片虚拟陆地，沿途收集数字燃料前往灯塔。  路过它的时候请不要忘了，和上面正在学习汇编语言的小萨摩耶说：「Hi, there!」。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"white","avatar":"/images/tvicon.png","favicon":"/images/tvicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"TV_Head Space 是由电子浮冰凝结成的一小片虚拟陆地，沿途收集数字燃料前往灯塔。  路过它的时候请不要忘了，和上面正在学习汇编语言的小萨摩耶说：「Hi, there!」。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -94,6 +94,14 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
                     
                 </ul>
             </div>
@@ -127,6 +135,11 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -187,17 +200,20 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="写这个博客的原因"><a href="#写这个博客的原因" class="headerlink" title="写这个博客的原因"></a>写这个博客的原因</h1><hr>
+            <p>写这个博客的原因和部署个人博客时遇到的一些问题。</p>
+<span id="more"></span>
+
+<h1 id="写这个博客的原因"><a href="#写这个博客的原因" class="headerlink" title="写这个博客的原因"></a>写这个博客的原因</h1><hr>
 <p>对于写代码一事向来是应用导向，C/JAVA/Python以及其他工具语言等等，都是先学个最最基础，能看懂基本语句并且了解语言逻辑之后就不再深入，到需要用的时候再从搜索引擎上胡乱抓来，导致和别人介绍起时什么都学过，也确实完成过些项目做出些东西，但也全都基础不牢。比如前天面试一家初创企业时被问到Python中的「global」函数都茫然，当即想挂掉电话以后永远不承认自己面过技术岗。<br>同样是这一次面试，被问到有没有任何技术博客或者github上自己的项目。屡次想到要开一个博客至少管理一下鸡零狗碎的代码，之前也在博客园开了一个主页，然而发布了几篇当时在做的爬虫项目后就没有继续坚持下来，后来整整一个学年，再写的代码写完就丢。<br>现在研一快结束，因为现实的种种原因确定不再做研究。原先假借「还没决定好就业还是读博」之名，舒舒服服地悬在云端，突然之间被抛到激烈竞争的市场当中，实体化为千万颗白菜中的一颗任人挑拣，被无声地turndown多次，才发现自己混了五年原来身无长物，于是乎最近一段时间一度焦虑过头。<br>好在寻寻觅觅终于还是找到一个相对满意的暑期实习，预期来看可算我转做技术的一个起点（hopefully），想到在这期间也许会学习一些新的工具或经手一些项目，也许不乏东西可记，因此费尽周章开了这个博客，希望除了系统性地回顾和梳理经手的项目外，还能让我动笔写些东西。</p>
 <h1 id="Hexo-Github-Pages部署时遇到的问题"><a href="#Hexo-Github-Pages部署时遇到的问题" class="headerlink" title="Hexo + Github Pages部署时遇到的问题"></a>Hexo + Github Pages部署时遇到的问题</h1><hr>
-<p>这部分介绍部署博客时踩到的坑，原本以为应该两三个小时可以解决，没想到花费了一整天才部署好一个功能正常的博客。这过程中参考的文档众多，关于博客部署主要是这篇：<br><a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000023346633" >保姆级——小白如何搭建自己的博客（Hexo+Github Pages）<i class="fas fa-external-link-alt"></i></a></p>
+<p>这部分介绍部署博客时踩到的坑，原本以为应该两三个小时可以解决，没想到花费了一整天才部署好一个功能正常的博客。这过程中参考的文档众多，关于博客部署主要是这篇：<br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000023346633">保姆级——小白如何搭建自己的博客（Hexo+Github Pages）</a></p>
 <h2 id="SSH配置问题"><a href="#SSH配置问题" class="headerlink" title="SSH配置问题"></a>SSH配置问题</h2><p>通过Hexo部署博客内容到Github Pages涉及到身份认证过程，我将博客的本地仓库搭建在D盘，所以一开始通过以下代码配置SSH秘钥时也没有使用默认路径。虽然配置成功，但后面进行登录认证时一直返回<code>publicly denied</code>。尝试了各种方法没有依然有同样的问题，最终重新在默认路径配置了SSH秘钥才通过验证。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> $ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]</span><br></pre></td></tr></table></figure>
 <h2 id="Hexo本地端口预览正常，deploy到github之后再username-github-io地址不显示主题的问题"><a href="#Hexo本地端口预览正常，deploy到github之后再username-github-io地址不显示主题的问题" class="headerlink" title="Hexo本地端口预览正常，deploy到github之后再username.github.io地址不显示主题的问题"></a>Hexo本地端口预览正常，deploy到github之后再username.github.io地址不显示主题的问题</h2><p>这个真的是大坑，需要说明的是我出现的问题不只是主题控件不显示，包括我自己的一些文件如<strong>文章、图片的修改</strong>等也需要多次deploy后才能显示。翻了无数文章帖子，提出可能是以下原因：  </p>
 <ol>
 <li>需要进行<code>hexo clean</code>。<br>无法解决。</li>
 <li>删除本地<code>deploy_git</code>文件后重新<code>hexo clean -g -d</code>。<br>同样无法解决。</li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660" >知乎<i class="fas fa-external-link-alt"></i></a><strong>Erain</strong>答主提到将<code>/username.github/io</code>添加到根目录的<code>_config.yml</code>中的<code>root</code>标签中。<br>这个操作可以解决CSS文件无法每次都成功上传的问题，但即使仓库内的文件全都是新上传的网页依旧无法正常显示。</li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660">知乎</a><strong>Erain</strong>答主提到将<code>/username.github/io</code>添加到根目录的<code>_config.yml</code>中的<code>root</code>标签中。<br>这个操作可以解决CSS文件无法每次都成功上传的问题，但即使仓库内的文件全都是新上传的网页依旧无法正常显示。</li>
 </ol>
 <p><strong>最后的解决办法</strong><br>被这个问题纠缠了整个晚上，最终重开了一个路径重头初始化Hexo。。。一切正常。<br>无论如何终于搭建好一个还能用的博客。</p>
 
@@ -205,6 +221,26 @@
 
         
 
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Django CRM实战|Day1：开发环境准备</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+            </div>
         
 
         
