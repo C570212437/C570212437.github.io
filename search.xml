@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>Django CRM实战|Day1：开发环境准备</title>
-      <link href="2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"/>
-      <url>2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/</url>
+      <title>Django CRM实战|Day1：开发环境安装</title>
+      <link href="2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
+      <url>2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day1%EF%BC%9A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
       
         <content type="html"><![CDATA[<p>IDE和数据库的安装。</p><span id="more"></span><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>这个项目起因是一门专业课的疯狂作业。小组成员几乎没有代码基础，而我此前也是完全没有接触过Django这个框架也几乎没有前端知识，所以边学边实操边记，把笔记分享给同学一起学习，既然记了也就顺手发到博客上。</p><p>但因为完全是目的导向的学习，对框架本身的底层理解一定基础不牢，因此可能出现一些完全不合理的操作，逻辑上的错乱也难以避免，如果有人不幸被演算法引导到此处，参考前还请思量每一步是否合理必要，如果有建议也非常感谢告知给我。</p><h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>下载并安装Pycharm<strong>专业版</strong>：</p><p><a class="link"   href="https://www.jetbrains.com/pycharm/download/#section=windows" >Download PyCharm: Python IDE for Professional Developers by JetBrains<i class="fas fa-external-link-alt"></i></a></p><p>python和django不需要另外下载安装，因为在pycharm里新建项目的时候会自动帮你安装虚拟环境和所需要的第三方库。</p><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>windows按照如下方法安装mysql：</p><p><a class="link"   href="https://zhuanlan.zhihu.com/p/37152572" >超级详细的mysql数据库安装指南<i class="fas fa-external-link-alt"></i></a></p><p>mysql是后端的数据引擎，安装完成后可以在丑丑的cmd界面用sql语言进行操作，当然也可以参考如下教程安装有图形界面的客户端进行操作。</p><p><a class="link"   href="https://zhuanlan.zhihu.com/p/37155150" >客户端navicat安装教程<i class="fas fa-external-link-alt"></i></a></p>]]></content>
       
