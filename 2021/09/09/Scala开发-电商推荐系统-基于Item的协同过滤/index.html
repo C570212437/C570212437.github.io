@@ -24,20 +24,20 @@
 
   <meta name="description" content="实习做了一个个性化推荐项目，尝试了协同过滤和word2vec两种算法，现在实习结束了做点记录。本篇介绍协同过滤算法，公司大数据平台开发环境简陋，没有Python编译环境，脚本是用Scala写的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scala开发|推荐系统-协同过滤">
-<meta property="og:url" content="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/index.html">
+<meta property="og:title" content="Scala开发|电商推荐系统-基于Item的协同过滤">
+<meta property="og:url" content="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%9F%BA%E4%BA%8EItem%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/index.html">
 <meta property="og:site_name" content="TV_Head Space">
 <meta property="og:description" content="实习做了一个个性化推荐项目，尝试了协同过滤和word2vec两种算法，现在实习结束了做点记录。本篇介绍协同过滤算法，公司大数据平台开发环境简陋，没有Python编译环境，脚本是用Scala写的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-09T08:10:29.000Z">
-<meta property="article:modified_time" content="2021-09-09T08:35:05.066Z">
+<meta property="article:modified_time" content="2021-09-10T13:55:01.905Z">
 <meta property="article:author" content="TV_Head">
 <meta property="article:tag" content="Scala">
 <meta property="article:tag" content="Spark">
 <meta property="article:tag" content="推荐系统">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/">
+<link rel="canonical" href="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%9F%BA%E4%BA%8EItem%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/">
 
 
 <script id="page-configurations">
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title>Scala开发|推荐系统-协同过滤 | TV_Head Space</title>
+  <title>Scala开发|电商推荐系统-基于Item的协同过滤 | TV_Head Space</title>
   
 
 
@@ -198,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%9F%BA%E4%BA%8EItem%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/tvicon.png">
@@ -211,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Scala开发|推荐系统-协同过滤
+          Scala开发|电商推荐系统-基于Item的协同过滤
         </h1>
 
         <div class="post-meta">
@@ -220,10 +220,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-09-09 16:10:29 / 修改时间：16:35:05" itemprop="dateCreated datePublished" datetime="2021-09-09T16:10:29+08:00">2021-09-09</time>
+              <time title="创建时间：2021-09-09 16:10:29" itemprop="dateCreated datePublished" datetime="2021-09-09T16:10:29+08:00">2021-09-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-10 21:55:01" itemprop="dateModified" datetime="2021-09-10T21:55:01+08:00">2021-09-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -532,7 +538,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'tvhead98.github.io',
       owner       : 'tvhead98',
       admin       : ['tvhead98'],
-      id          : 'fac7f786c9b8683ce6e53e014cc8b07f',
+      id          : '03bf8fc3caa57ff6ff5a6d216a16e79b',
         language: 'zh-CN',
       distractionFreeMode: true
     });

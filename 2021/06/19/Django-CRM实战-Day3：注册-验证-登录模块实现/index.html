@@ -342,7 +342,7 @@
 <img src="/2021/06/19/Django-CRM%E5%AE%9E%E6%88%98-Day3%EF%BC%9A%E6%B3%A8%E5%86%8C-%E9%AA%8C%E8%AF%81-%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0/1624114436(1).png" class="">
 
 <ol start="2">
-<li>对于邮箱，除了判断是否为空外，还要验证邮箱格式是否符合<a href="mailto:&#120;&#x78;&#64;&#120;&#120;&#x2e;&#120;&#120;">&#120;&#x78;&#64;&#120;&#120;&#x2e;&#120;&#120;</a>的样式，一般用正则表达式实现：</li>
+<li>对于邮箱，除了判断是否为空外，还要验证邮箱格式是否符合<a href="mailto:&#120;&#120;&#64;&#x78;&#x78;&#46;&#x78;&#x78;">&#120;&#120;&#64;&#x78;&#x78;&#46;&#x78;&#x78;</a>的样式，一般用正则表达式实现：</li>
 </ol>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">functioncheck_email</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    email =$(<span class="string">&#x27;#email_reg&#x27;</span>).val();</span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/</span>;</span><br><span class="line">    <span class="keyword">if</span>($.trim(email)==<span class="string">&#x27;&#x27;</span>||$.trim(email)==<span class="literal">null</span>)&#123;</span><br><span class="line">				$(<span class="string">&#x27;#notice&#x27;</span>).html(<span class="string">&#x27;邮箱不能为空&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!reg.test(email))&#123;</span><br><span class="line">				$(<span class="string">&#x27;#notice&#x27;</span>).html(<span class="string">&#x27;请输入正确格式的邮箱&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">				$(<span class="string">&#x27;#notice&#x27;</span>).html(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$(<span class="string">&#x27;#email_reg&#x27;</span>).on(<span class="string">&#x27;blur&#x27;</span>, check_email);</span><br></pre></td></tr></table></figure>
 
@@ -441,8 +441,8 @@
       <i class="fa fa-chevron-left"></i> Django CRM实战|Day2：Django环境搭建
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/" rel="next" title="Scala开发|推荐系统-协同过滤">
-      Scala开发|推荐系统-协同过滤 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/09/09/Scala%E5%BC%80%E5%8F%91-%E7%94%B5%E5%95%86%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F-%E5%9F%BA%E4%BA%8EItem%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4/" rel="next" title="Scala开发|电商推荐系统-基于Item的协同过滤">
+      Scala开发|电商推荐系统-基于Item的协同过滤 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
